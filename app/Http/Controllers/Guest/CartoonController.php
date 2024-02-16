@@ -7,13 +7,13 @@ use Illuminate\Http\Request;
 
 // importo il Model nel COntroller 
 
-use App\Models\ComicsModel;
+use App\Models\ComicModel;
 
-class ComicsController extends Controller
+class CartoonController extends Controller
 {
     public function index () {
     // associo il model a una variabile...
-    $comics = ComicsModel :: all();
+    $comics = Cartoon :: all();
     return view('pages.index', compact('comics')); 
 }
 }

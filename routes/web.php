@@ -2,6 +2,6 @@
 
 use Illuminate\Support\Facades\Route;
 // Importo il COntroller ComicsController 
-use App\Http\Controllers\Guest\ComicsController;
+use App\Http\Controllers\Guest\ComicController;
 
-Route::get('/', [ComicsController::class, 'index']);
+Route::get('/', [ComicController::class, 'index']);

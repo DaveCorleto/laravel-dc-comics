@@ -7,13 +7,13 @@ use Illuminate\Database\Seeder;
 
 // importo il Model
 
-use App\Models\ComicsModel;
+use App\Models\Cartoon;
 
 // importo la factory 
 
-use Database\Factories\CartoonsFactory;
+use Database\Factories\CartoonFactory;
 
-class CartoonsSeeder extends Seeder
+class CartoonSeeder extends Seeder
 {
     /**
      * Run the database seeds.
@@ -21,7 +21,8 @@ class CartoonsSeeder extends Seeder
      * @return void
      */
     public function run()
-    {
-        CartoonsFactory::factory () -> count (42) -> create();
+    // Il model va scritto al singolare e senza Model
+    {   
+        Cartoon::factory () -> count (42) -> create();
     }
 }

@@ -5,8 +5,8 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class ComicsModel extends Model
+class Cartoon extends Model
 {
     use HasFactory;
-    public $timestamp = false;
+
 }
