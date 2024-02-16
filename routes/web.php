@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-// Importo il COntroller ComicsController 
-use App\Http\Controllers\Guest\ComicController;
+// Importo il COntroller CartoonController 
+use App\Http\Controllers\Guest\CartoonController;
 
-Route::get('/', [ComicController::class, 'index']);
+Route::get('/', [CartoonController::class, 'index']);

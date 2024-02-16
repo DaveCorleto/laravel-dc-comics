@@ -7,7 +7,7 @@ use Illuminate\Http\Request;
 
 // importo il Model nel COntroller 
 
-use App\Models\ComicModel;
+use App\Models\Cartoon;
 
 class CartoonController extends Controller
 {
