@@ -51,9 +51,8 @@ class CartoonController extends Controller
         $comic -> genre = $data['genre'];
         $comic -> edition_number = $data['edition_number'];
         $comic -> value = $data['value'];
-
         $comic -> save();
-        return redirect () -> route ('comic.show', $comic->id);
+        return redirect()->route('comic.show', $comic->id);
     }
 
     /**
@@ -64,8 +63,8 @@ class CartoonController extends Controller
      */
     public function show($id)
     {
-        $comic = Cartoon:: find($id);
-        return view ('pages.comic.show',compact ('comic'));
+        $comic = Cartoon::find($id);
+        return view ('pages.comic.show', compact('comic'));
     }
 
     /**
@@ -76,7 +75,8 @@ class CartoonController extends Controller
      */
     public function edit($id)
     {
-        //
+        $comic = Cartoon::find($id);
+        return view ('pages.comic.edit', compact('comic'));
     }
 
     /**
@@ -88,7 +88,20 @@ class CartoonController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $data = $request->all();
+        $comic = Cartoon ::find($id);
+
+        $comic -> title = $data['title'];
+        $comic -> years = $data['years'];
+        $comic -> author = $data['author'];
+        $comic -> illustrator = $data['illustrator'];
+        $comic -> publisher = $data['publisher'];
+        $comic -> genre = $data['genre'];
+        $comic -> edition_number = $data['edition_number'];
+        $comic -> value = $data['value'];
+
+        $comic->update();
+        return redirect()-> route ('comic.show', $comic->id);
     }
 
     /**
@@ -98,7 +111,9 @@ class CartoonController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function destroy($id)
-    {
-        //
+    {   
+        $comic = Cartoon ::find($id);
+        $comic->delete();
+        return redirect()->route('comic.index');
     }
 }
