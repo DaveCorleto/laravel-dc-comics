@@ -4,6 +4,8 @@
 @endsection
 @section('content')
     <h1>Comics:</h1>
+    <a href="{{route('comic.create')}}">CREATE</a>
+    <br><br>
     <ul>
         @foreach ($comics as $comic)
         <li>

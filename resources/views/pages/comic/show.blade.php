@@ -3,17 +3,15 @@
     <title>Home</title>
 @endsection
 @section('content')
-    <h1>Comics:</h1>
+    <h1>Comic:</h1>
     <ul> 
-        <li>
-            {{$comic->title}}
-        </li>
+        <li>{{$comic->title}}</li>
+        <li>{{$comic->years}}</li>
+        <li>{{$comic->author}}</li>   
+        <li>{{$comic->publisher}}</li>  
+        <li>{{$comic->illustrator}}</li> 
+        <li>{{$comic->genre}}</li>
+        <li>{{$comic->edition_number}}</li>
+        <li>{{$comic->value}}</li>
     </ul>
 @endsection
-
-<style lang=scss>
-    ul {
-        list-style:none;
-        color:brown;
-    }
-</style>
