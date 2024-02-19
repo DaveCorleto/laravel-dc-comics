@@ -4,12 +4,10 @@
 @endsection
 @section('content')
     <h1>Comics:</h1>
-    <ul>
-        @foreach ($comics as $comic)
+    <ul> 
         <li>
-            {{$comic -> title}}
+            {{$comic->title}}
         </li>
-        @endforeach
     </ul>
 @endsection
 

@@ -50,8 +50,8 @@ class CartoonController extends Controller
      */
     public function show($id)
     {
-        $comics = Cartoon:: find($id);
-        return view ('pages.comic.show',compact ('comics'));
+        $comic = Cartoon:: find($id);
+        return view ('pages.comic.show',compact ('comic'));
     }
 
     /**
